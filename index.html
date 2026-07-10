@@ -3,21 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Marcio Eduardo</title>
-<meta name="description" content="Grupo no WhatsApp, iHub Affiliates e Rev do Bem — todos os links do Marcio Eduardo em um só lugar.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!-- A página já é escura. Sem isso o Auto Dark Mode do Chrome inverte o botão branco. -->
+<meta name="color-scheme" content="dark">
+
+<title>Marcio Eduardo (@omarcioeduardo) — Expert em Marketing de Afiliados</title>
+<meta name="description" content="Entre no grupo do WhatsApp e cadastre-se na iHub Affiliates e na Rev do Bem. Todos os links oficiais do Marcio Eduardo em um só lugar.">
+<link rel="canonical" href="https://omarcioeduardo.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#000000">
+<meta name="author" content="Marcio Eduardo">
+
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- Prévia ao compartilhar o link (WhatsApp, Instagram, Facebook) -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Marcio Eduardo">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://omarcioeduardo.com/">
+<meta property="og:title" content="Marcio Eduardo (@omarcioeduardo) — Expert em Marketing de Afiliados">
+<meta property="og:description" content="Entre no grupo do WhatsApp e cadastre-se na iHub Affiliates e na Rev do Bem. Todos os links oficiais em um só lugar.">
+<meta property="og:image" content="https://omarcioeduardo.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Marcio Eduardo palestrando sobre marketing de afiliados">
+<meta property="profile:username" content="omarcioeduardo">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- A fonte e a foto do hero são o caminho crítico; pedir antes do CSS evita esperar o parse -->
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/palco-2.webp" as="image" fetchpriority="high">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://omarcioeduardo.com/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Marcio Eduardo",
+    "alternateName": "@omarcioeduardo",
+    "jobTitle": "Expert em Marketing de Afiliados",
+    "url": "https://omarcioeduardo.com/",
+    "image": "https://omarcioeduardo.com/assets/og-image.jpg",
+    "sameAs": [
+      "https://instagram.com/omarcioeduardo"
+    ]
+  }
+}
+</script>
 </head>
 <body>
 
-<!-- Fundo: a mesma foto do hero, borrada e fixa -->
-<div class="page-bg" style="background-image:url('assets/palco-2.jpg')"></div>
+<!-- Fundo: a foto do hero em 32px, esticada e borrada. Em tamanho real o blur custa caro no celular. -->
+<div class="page-bg"></div>
 
 <!-- Barra que aparece ao rolar -->
 <header class="topbar" id="topbar">
-  <img class="topbar__avatar" src="assets/palco-2.jpg" alt="">
+  <img class="topbar__avatar" src="assets/palco-2.webp" alt="" width="599" height="900">
   <span class="topbar__name">Marcio Eduardo</span>
   <svg class="badge" viewBox="0 0 24 24" aria-label="Verificado"><use href="#verified"></use></svg>
 </header>
@@ -25,7 +69,8 @@
 <main class="card">
 
   <section class="hero">
-    <img class="hero__img" src="assets/palco-2.jpg" alt="Marcio Eduardo">
+    <img class="hero__img" src="assets/palco-2.webp" alt="Marcio Eduardo palestrando sobre marketing de afiliados"
+         width="599" height="900" fetchpriority="high" decoding="async">
     <div class="hero__fade"></div>
 
     <div class="hero__content">
@@ -64,19 +109,19 @@
     <h2 class="section-title">COMECE POR AQUI</h2>
 
     <div class="links">
-      <a class="link link--ihub" href="https://ihubaffiliates.com.br/cadastro?ref=11140&plataforma=2" target="_blank" rel="noopener">
-        <img class="link__bg" src="assets/palco-2.jpg" alt="">
+      <a class="link link--ihub" href="https://ihubaffiliates.com.br/cadastro?ref=11140&plataforma=2" target="_blank" rel="noopener sponsored">
+        <img class="link__bg" src="assets/palco-2.webp" alt="" width="599" height="900" loading="lazy" decoding="async">
         <span class="link__content">
-          <img class="link__logo" src="assets/logo-ihub.png" alt="iHub Affiliates">
+          <img class="link__logo" src="assets/logo-ihub.webp" alt="iHub Affiliates" width="423" height="160" loading="lazy" decoding="async">
           <small>Criar minha conta na plataforma</small>
         </span>
         <svg class="link__arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow"></use></svg>
       </a>
 
-      <a class="link link--rev" href="https://dashboard.revdobem.com/cadastro?ref=7EB614" target="_blank" rel="noopener">
-        <img class="link__bg" src="assets/marcio.jpg" alt="">
+      <a class="link link--rev" href="https://dashboard.revdobem.com/cadastro?ref=7EB614" target="_blank" rel="noopener sponsored">
+        <img class="link__bg" src="assets/marcio.webp" alt="" width="675" height="900" loading="lazy" decoding="async">
         <span class="link__content">
-          <img class="link__logo" src="assets/logo-revdobem.png" alt="Rev do Bem">
+          <img class="link__logo" src="assets/logo-revdobem.webp" alt="Rev do Bem" width="863" height="120" loading="lazy" decoding="async">
           <small>Cadastro com meu link de indicação</small>
         </span>
         <svg class="link__arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow"></use></svg>
@@ -110,6 +155,6 @@
   <path id="arrow" d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-<script src="app.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>
