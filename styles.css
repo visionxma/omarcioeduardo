@@ -113,7 +113,7 @@ body {
 
 .handle { font-size: 14px; font-weight: 500; color: var(--muted); margin-top: 2px; }
 
-.socials { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
+.socials { display: flex; justify-content: center; gap: 8px; margin-top: 32px; }
 .socials__btn {
   width: 36px;
   height: 36px;
@@ -227,7 +227,7 @@ body {
 
 /* ---------- Rodapé ---------- */
 .footer {
-  margin-top: 26px;
+  margin-top: 18px;
   display: flex;
   justify-content: center;
   gap: 8px;
