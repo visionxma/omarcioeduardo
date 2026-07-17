@@ -1,1 +1,5 @@
 .DS_Store
+
+# Fotos originais em HEIC (fonte). Os WebP/JPG/PNG derivados em assets/ é que vão pro site.
+*.heic
+*.HEIC
