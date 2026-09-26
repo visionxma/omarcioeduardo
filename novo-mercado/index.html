@@ -48,11 +48,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, .08);
   }
   .topbar__name { font-size: 15px; }
-  /* A foto do palco é inteira; no círculo de 32px o rosto sumia. Zoom no rosto. */
-  .topbar__avatar {
-    flex: none;
-    background: url(../assets/palco-2.webp) -68px -78px / 140px auto no-repeat;
-  }
 
   /* Selo de alerta acima do título */
   .alert {
@@ -191,7 +186,7 @@ src="https://www.facebook.com/tr?id=27167251579531972&ev=PageView&noscript=1"></
 
 <!-- Barra que aparece ao rolar -->
 <header class="topbar">
-  <span class="topbar__avatar" aria-hidden="true"></span>
+  <img class="topbar__avatar" src="../assets/perfil.webp" alt="" width="32" height="32">
   <span class="topbar__name">@omarcioeduardo</span>
   <svg class="badge" viewBox="0 0 24 24" aria-label="Verificado"><use href="#verified"></use></svg>
 </header>
