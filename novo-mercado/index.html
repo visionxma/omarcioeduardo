@@ -39,18 +39,19 @@
   .hero { aspect-ratio: 4 / 5; }
   .body { padding-top: 22px; }
 
-  /* Sem o nome, o @ sobe e assume o lugar dele */
-  .handle--solo {
-    margin: 0;
-    display: flex;
-    align-items: center;
+  /* O @ vira header fixo: sempre visível, centralizado, sobre a foto */
+  .topbar {
+    transform: translate(-50%, 0);
     justify-content: center;
-    gap: 4px;
-    font-size: 17px;
-    font-weight: 700;
-    color: #fff;
+    padding: 10px var(--pad);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
   }
-  .handle--solo .badge { width: 17px; height: 17px; }
+  .topbar__name { font-size: 15px; }
+  /* A foto do palco é inteira; no círculo de 32px o rosto sumia. Zoom no rosto. */
+  .topbar__avatar {
+    flex: none;
+    background: url(../assets/palco-2.webp) -68px -78px / 140px auto no-repeat;
+  }
 
   /* Selo de alerta acima do título */
   .alert {
@@ -158,8 +159,8 @@
 <div class="page-bg"></div>
 
 <!-- Barra que aparece ao rolar -->
-<header class="topbar" id="topbar">
-  <img class="topbar__avatar" src="../assets/palco-2.webp" alt="" width="599" height="900">
+<header class="topbar">
+  <span class="topbar__avatar" aria-hidden="true"></span>
   <span class="topbar__name">@omarcioeduardo</span>
   <svg class="badge" viewBox="0 0 24 24" aria-label="Verificado"><use href="#verified"></use></svg>
 </header>
@@ -171,12 +172,6 @@
          width="599" height="900" fetchpriority="high" decoding="async">
     <div class="hero__fade"></div>
 
-    <div class="hero__content">
-      <p class="handle handle--solo">
-        @omarcioeduardo
-        <svg class="badge" viewBox="0 0 24 24" aria-label="Verificado"><use href="#verified"></use></svg>
-      </p>
-    </div>
   </section>
 
   <section class="body">
@@ -253,12 +248,5 @@
   <path id="arrow" d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-<script>
-// A barra do topo entra assim que o @ sai da tela (o app.js observa .name, que esta página não tem).
-new IntersectionObserver(
-  ([entry]) => document.getElementById('topbar').classList.toggle('is-visible', !entry.isIntersecting),
-  { rootMargin: '-8px 0px 0px 0px' }
-).observe(document.querySelector('.handle'));
-</script>
 </body>
 </html>
