@@ -168,6 +168,22 @@
     .alert__dot { animation: none; }
   }
 </style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '27167251579531972');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=27167251579531972&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel -->
 </head>
 <body>
 
@@ -266,5 +282,12 @@
   <path id="arrow" d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
+<script>
+// Lead: clique em qualquer link do grupo do WhatsApp (botão fixo e ícone das redes).
+// O link abre em outra aba, então esta página continua viva para o evento sair.
+document.querySelectorAll('a[href*="chat.whatsapp.com"]').forEach((a) =>
+  a.addEventListener('click', () => { if (window.fbq) fbq('track', 'Lead'); })
+);
+</script>
 </body>
 </html>
